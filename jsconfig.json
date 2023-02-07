@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "/": ["./"]
+    },
+    "types": ["@dcloudio/types", "miniprogram-api-typings", "mini-types"]
+  }
+}
