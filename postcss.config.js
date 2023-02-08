@@ -1,5 +1,7 @@
-const path = require('path');
 const webpack = require('webpack');
+const path = require('path');
+const { WeappTailwindcssDisabled } = require('./platform');
+
 const config = {
   parser: require('postcss-comment'),
   plugins: [
@@ -15,6 +17,16 @@ const config = {
         return id;
       },
     }),
+
+    require('tailwindcss')({ config: './tailwind.config.js' }),
+    // rem 转 rpx
+    WeappTailwindcssDisabled
+      ? undefined
+      : require('postcss-rem-to-responsive-pixel')({
+          rootValue: 32,
+          propList: ['*'],
+          transformUnit: 'rpx',
+        }),
     require('autoprefixer')({
       remove: process.env.UNI_PLATFORM !== 'h5',
     }),

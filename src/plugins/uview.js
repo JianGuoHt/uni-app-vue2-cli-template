@@ -15,6 +15,4 @@ export function setupUView(Vue) {
       },
     },
   });
-
-  console.log('uView', uni.$u.config.v);
 }

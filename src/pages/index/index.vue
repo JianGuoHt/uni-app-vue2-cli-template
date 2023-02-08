@@ -1,9 +1,13 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view>
+    <image class="logo" src="../../static/logo.png"></image>
+    <view class="flex w-2">
       <text class="title">{{ title }}</text>
     </view>
+    <view
+      class="bg-green-300 hover:bg-red-700 active:bg-blue-700"
+      style="width: 100rpx; height: 100rpx"
+    ></view>
     <u-button>123</u-button>
     <u-tag text="标签" plain size="mini" type="warning"></u-tag>
   </view>
