@@ -1,6 +1,6 @@
 <template>
   <view class="content">
-    <image class="logo" src="../../static/logo.png"></image>
+    <image class="logo" src="http://127.0.0.1:3000/logo.png"></image>
     <view class="flex w-2">
       <text class="title">{{ title }}</text>
     </view>

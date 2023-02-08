@@ -6,20 +6,8 @@
 npx @dcloudio/uvm
 ```
 
-## Project setup
+初始化项目
 
 ```shell
 yarn install
-```
-
-### Compiles and hot-reloads for development
-
-```shell
-yarn serve
-```
-
-### Compiles and minifies for production
-
-```shell
-yarn build
 ```
