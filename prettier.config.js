@@ -1,5 +1,10 @@
 // https://prettier.io/docs/en/configuration.html
 module.exports = {
+  // 针对 tailwind.css 的配置
+  // 根据推荐的类顺序自动对类进行排序
+  plugins: [require('prettier-plugin-tailwindcss')],
+  tailwindConfig: './tailwind.config.js',
+
   // 每一行的宽度(显示的字符数)
   printWidth: 100,
 
