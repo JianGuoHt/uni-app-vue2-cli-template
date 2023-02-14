@@ -16,6 +16,8 @@ export default {
 /* tailwindcss */
 @import 'tailwindcss/base';
 @import 'tailwindcss/utilities';
-/* 每个页面公共css */
+/* uview-ui css */
 @import 'uview-ui/index.scss';
+/* 每个页面公共css */
+@import './design/index.scss';
 </style>
