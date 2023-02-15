@@ -22,5 +22,22 @@ module.exports = {
         },
       ],
     });
+
+    // 生产环境剔除 eruda
+    config.externals = process.env.NODE_ENV === 'development' ? {} : { eruda: 'eruda' };
+  },
+
+  chainWebpack(config) {
+    // config.optimization.splitChunks({
+    //   chunks: 'all',
+    //   cacheGroups: {
+    //     libs: {
+    //       name: 'chunk-libs',
+    //       test: /[\\/]node_modules[\\/]/,
+    //       priority: 10,
+    //       chunks: 'initial', // only package third parties that are initially dependent
+    //     },
+    //   },
+    // });
   },
 };

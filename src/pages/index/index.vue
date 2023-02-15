@@ -1,6 +1,6 @@
 <template>
   <view class="content flex flex-col items-center justify-center">
-    <nav-bar title="首页"></nav-bar>
+    <NavBar title="首页"></NavBar>
     <u-image width="200rpx" height="200rpx" :src="RESOURCE_URL + '/logo.png'"></u-image>
     <view class="flex">
       <text class="title">{{ pageTitle }}</text>
@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar/NavBar.vue';
 import {
   showToast,
   showSuccessToast,
@@ -45,7 +44,6 @@ import {
 } from '@/utils/showToast';
 import { mapState } from 'vuex';
 export default {
-  components: { NavBar },
   data() {
     return {
       pageTitle: 'Hello!',

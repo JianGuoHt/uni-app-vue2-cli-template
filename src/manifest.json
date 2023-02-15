@@ -64,5 +64,12 @@
   },
   "mp-qq": {
     "usingComponents": true
+  },
+  "h5": {
+    "optimization": {
+      "treeShaking": {
+        "enable": true
+      }
+    }
   }
 }

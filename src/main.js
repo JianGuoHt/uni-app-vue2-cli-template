@@ -9,10 +9,6 @@ import { setupPlugins } from './plugins';
 
 Vue.config.productionTip = false;
 App.mpType = 'app';
-const app = new Vue({
-  store,
-  ...App,
-});
 
 // 全局挂载 资源服务器地址
 uni.RESOURCE_URL = process.env.VUE_APP_RESOURCE_URL;
@@ -26,5 +22,10 @@ setupGlobDirectives(Vue);
 
 // 挂载全局Mixin
 setupGlobMixin(Vue);
+
+const app = new Vue({
+  store,
+  ...App,
+});
 
 app.$mount();
