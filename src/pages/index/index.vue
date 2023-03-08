@@ -3,7 +3,7 @@
     <NavBar title="首页"></NavBar>
     <u-image width="200rpx" height="200rpx" :src="RESOURCE_URL + '/logo.png'"></u-image>
     <view class="flex">
-      <text class="title">{{ pageTitle }}</text>
+      <text class="title">{{ pageTitle }}123</text>
     </view>
     <view>
       <text> {{ RESOURCE_URL }} </text>
@@ -52,9 +52,7 @@ export default {
   computed: {
     ...mapState('app', ['title']),
   },
-  onLoad() {
-    console.log(this);
-  },
+  onLoad() {},
   methods: {
     showToast() {
       showToast({

@@ -37,7 +37,7 @@ export function showToast(
   );
   // #endif
 
-  // #ifndef H5
+  // #ifdef MP-WEIXIN
   const page = getCurrentPages();
   const cuPageVM = page[page.length - 1].$vm;
   cuPageVM.$refs.toast.show(params);

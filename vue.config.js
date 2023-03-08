@@ -24,7 +24,7 @@ module.exports = {
     });
 
     // 生产环境剔除 eruda
-    config.externals = process.env.NODE_ENV === 'development' ? {} : { eruda: 'eruda' };
+    // config.externals = process.env.NODE_ENV === 'development' ? {} : { eruda: 'eruda' };
   },
 
   chainWebpack(config) {

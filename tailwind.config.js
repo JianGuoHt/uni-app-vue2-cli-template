@@ -2,7 +2,8 @@
 module.exports = {
   content: ['public/index.html', './src/**/*.{vue,js,ts,jsx,tsx,wxml}'],
   // separator: '__',
-  darkMode: false,
+  darkMode: 'media',
+  // darkMode: false,
   theme: {
     extend: {},
   },
