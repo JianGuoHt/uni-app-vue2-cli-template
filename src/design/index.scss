@@ -1,1 +1,7 @@
 // base scss
+
+/* #ifdef APP-PLUS */
+body {
+  margin: 0;
+}
+/* #endif */

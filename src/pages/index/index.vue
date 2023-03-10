@@ -1,5 +1,6 @@
 <template>
   <view class="content flex flex-col items-center justify-center">
+    <u-toast ref="uToast"></u-toast>
     <NavBar title="首页"></NavBar>
     <u-image width="200rpx" height="200rpx" :src="RESOURCE_URL + '/logo.png'"></u-image>
     <view class="flex">

@@ -5,7 +5,6 @@ import { setupEruda } from './eruda';
 // #endif
 
 export function setupPlugins(Vue) {
-  console.log(123);
   // 挂载uView
   setupUView(Vue);
 

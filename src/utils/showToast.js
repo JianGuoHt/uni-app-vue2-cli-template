@@ -42,6 +42,14 @@ export function showToast(
   const cuPageVM = page[page.length - 1].$vm;
   cuPageVM.$refs.toast.show(params);
   // #endif
+
+  // #ifdef APP-PLUS
+  plus.nativeUI.toast(`<span>${params.message}</span>`, {
+    verticalAlign: 'center',
+    align: 'center',
+    type: 'richtext',
+  });
+  // #endif
 }
 
 /**

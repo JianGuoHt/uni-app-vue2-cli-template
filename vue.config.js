@@ -2,6 +2,8 @@ const { UniAppWeappTailwindcssWebpackPluginV5 } = require('weapp-tailwindcss-web
 const { WeappTailwindcssDisabled } = require('./platform');
 const path = require('path');
 
+console.log('当前开发平台：' + process.env.UNI_PLATFORM);
+
 module.exports = {
   transpileDependencies: ['uview-ui', 'z-paging'],
   configureWebpack: (config) => {
@@ -11,20 +13,24 @@ module.exports = {
       }),
     );
 
-    config.module.rules.push({
-      test: /\.vue$/,
-      use: [
-        {
-          loader: 'vue-inset-loader',
-          options: {
-            pagesPath: path.resolve(__dirname, './src/pages.json'),
+    if (process.env.UNI_PLATFORM === 'mp-weixin') {
+      config.module.rules.push({
+        test: /\.vue$/,
+        use: [
+          {
+            loader: 'vue-inset-loader',
+            options: {
+              pagesPath: path.resolve(__dirname, './src/pages.json'),
+            },
           },
-        },
-      ],
-    });
+        ],
+      });
+    }
 
-    // 生产环境剔除 eruda
-    // config.externals = process.env.NODE_ENV === 'development' ? {} : { eruda: 'eruda' };
+    if (process.env.UNI_PLATFORM === 'h5') {
+      // 生产环境剔除 eruda
+      config.externals = process.env.NODE_ENV === 'development' ? {} : { eruda: 'eruda' };
+    }
   },
 
   chainWebpack(config) {

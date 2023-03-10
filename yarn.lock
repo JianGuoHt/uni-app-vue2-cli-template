@@ -2058,6 +2058,11 @@
   resolved "https://registry.npmmirror.com/@types/html-minifier-terser/-/html-minifier-terser-6.1.0.tgz#4fc33a00c1d0c16987b1a20cf92d20614c55ac35"
   integrity sha512-oh/6byDPnL1zeNXFrDXFLyZjkr1MsBG667IM792caf1L2UPOOMf65NFzjUH/ltyfwjAGfs1rsX1eftK0jC/KIg==
 
+"@types/html5plus@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npmmirror.com/@types/html5plus/-/html5plus-1.0.2.tgz#43e1aaca4584e7e2cf0db082389f42fbba98062c"
+  integrity sha512-OklP5lrmLq8/6TUOLgWc0LndUVvAiTWX5dnyoCFhIUtFW9opWsnCtG/UxPgeuC28Rv2XNbFfft/hEEI39P/4Ag==
+
 "@types/http-proxy@^1.17.8":
   version "1.17.9"
   resolved "https://registry.npmmirror.com/@types/http-proxy/-/http-proxy-1.17.9.tgz#7f0e7931343761efde1e2bf48c40f02f3f75705a"
